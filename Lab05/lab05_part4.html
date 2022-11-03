@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_05_Part4</title>
+</head>
+<body>
+
+    <script>
+        const change = () => {
+            var txt = document.querySelector("#txt");
+            const border = {
+                red: parseInt(document.querySelector("#redBorder").value),
+                green: parseInt(document.querySelector("#greenBorder").value),
+                blue: parseInt(document.querySelector("#blueBorder").value),
+                width: parseInt(document.querySelector("#widthBorder").value)
+            };
+            const background = {
+                red: parseInt(document.querySelector("#redBackground").value),
+                green: parseInt(document.querySelector("#greenBackground").value),
+                blue: parseInt(document.querySelector("#blueBackground").value)
+            };
+            if(border.red >= 0 && border.red <= 255 && border.green >= 0 && border.green <= 255 && border.blue >= 0 && border.blue <= 255 && border.width >= 0 && background.red >= 0 && background.red <= 255 && background.green >= 0 && background.green <= 255 && background.blue >= 0 && background.blue <= 255) {
+                txt.style.border = `rgb(${border.red}, ${border.green}, ${border.blue}) solid ${border.width}px`;
+                txt.style.backgroundColor = `rgb(${background.red}, ${background.green}, ${background.blue})`;
+            } else {
+                alert("ERROR: Please enter value from 0-255.");
+            }
+        }
+    </script>
+
+    <div id="txt">This is an example of how you can change CSS attributes within the webpage.</div>
+    <div>
+        <h3>Border Color:</h3>
+        <p>Red Value 0-255:</p>
+        <input id="redBorder" type="number" min="0" max="255">
+        <p>Green Value 0-255:</p>
+        <input id="greenBorder" type="number" min="0" max="255">
+        <p>Blue Value 0-255:</p>
+        <input id="blueBorder" type="number" min="0" max="255">
+        <p>Width</p>
+        <input id="widthBorder" type="number" min="0">
+    </div>
+    <div>
+        <h3>Background Color:</h3>
+        <p>Red Value 0-255:</p>
+        <input id="redBackground" type="text" type="number" min="0" max="255">
+        <p>Green Value 0-255:</p>
+        <input id="greenBackground" type="text" type="number" min="0" max="255">
+        <p>Blue Value 0-255:</p>
+        <input id="blueBackground" type="text" type="number" min="0" max="255">
+    </div>
+    <button onclick="change()">Update</button>
+    
+</body>
+</html>
