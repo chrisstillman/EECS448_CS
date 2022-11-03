@@ -8,46 +8,46 @@
 </head>
 <body>
     <script>
-        const imgSRCs = ["Avicii_Nights.jpeg", "CalvinHarris_Potion.jpeg", "CG_AML.jpeg", "Eagles.jpeg", "OldD_TTT.jpeg"];
         var current = 0;
+        const imageArr = ["Avicii_Nights.jpeg", "CalvinHarris_Potion.jpeg", "CG_AML.jpeg", "Eagles.jpeg", "OldD_TTT.jpeg"];
         const previous = () => {
-            var img = document.querySelector("img");
+            var image = document.querySelector("image");
             current = current == 0 ? 4 : current-1;
-            img.src = "./lab05_part2_assets/"+imgSRCs[current];
+            image.src = "./lab05_part2_assets/"+imageArr[current];
         }
         const next = () => {
-            var img = document.querySelector("img");
+            var image = document.querySelector("image");
             current = current == 4 ? 0 : current+1;
-            img.src = "./lab05_part2_assets/"+imgSRCs[current];
+            image.src = "./lab05_part2_assets/"+imageArr[current];
         }
     </script>
 
     <style>
         .container {
         position: relative;
-        width: 25%; /* The size you want */
+        width: 25%; 
         }
         .container:after {
         content: "";
         display: block;
-        padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+        padding-bottom: 100%;
         }
 
-        .container img {
-        position: absolute; /* Take your picture out of the flow */
+        .container image {
+        position: absolute; 
         top: 0;
         bottom: 0;
         left: 0;
-        right: 0; /* Make the picture taking the size of it's parent */
-        width: 100%; /* This if for the object-fit */
-        height: 100%; /* This if for the object-fit */
-        object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+        right: 0; 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
         object-position: center;
         }
     </style>
 
     <div class="container">
-        <img width="400px" heigh="300px" src="./lab05_part2_assets/Avicii_Nights.jpeg">
+        <image width="400px" heigh="300px" src="./lab05_part2_assets/Avicii_Nights.jpeg">
     </div>
     <div>
         <button onclick="previous()">Previous Image</button>
