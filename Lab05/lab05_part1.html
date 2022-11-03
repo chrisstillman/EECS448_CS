@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        const validatePass = ()=> {
+        const passwordCheck = ()=> {
             var passwordA = document.querySelector("#passwordA").value;
             var passwordB = document.querySelector("#passwordB").value;
             if(passwordA.length < 8 || passwordB.length < 8) {
@@ -30,7 +30,7 @@
         <input type="password" id="passwordB" name="password" required>
     </div>
 
-    <button onclick="validatePass()">Validate</button>
+    <button onclick="passwordCheck()">Validate</button>
 
     <p style="color: black;" id="alerts"></p>
     
