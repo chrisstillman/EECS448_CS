@@ -1,0 +1,49 @@
+input, button {
+    border: 1px rgb(158, 51, 51) solid;
+    border-radius: 1px;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(12, 12, 87);
+    
+}
+
+h4 {
+    color: rgb(180, 139, 3);
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+table {
+    background-color: rgb(190, 99, 99);
+    border: 5px solid black;
+    padding: 1px;
+}
+
+tr:nth-child(odd) {
+    background-color: lightskyblue;
+}
+
+tr.header {
+    font-size: larger;
+    font-weight: bold;
+    background-color: rgb(136, 4, 4);
+}
+
+td {
+    border: 2px solid black;
+}
+
+td:first-child {
+    font-weight: bold;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>KU Merchandise Store</h1>
+    <form action="customerBackEnd.php" method="post">
+        <h3>Items:</h3>
+        <h4>$20.00 KU Short Sleeve Tee:</h4>
+         Quantity <input type="number" name="option1" min="0" required><br>
+        <h4>$30.00 KU Long Sleeve Tee:</h4> 
+         Quantity <input type="number" name="option2" min="0" required><br>
+        <h4>$40.00 KU Hoodie:</h4>
+         Quantity <input type="number" name="option3" min="0" required>
+        <h3>Shipping:</h3>
+        <input type="radio" name="shipping" value="Standard" required>Standard Shipping - 7 Business Days - Free 
+        <br><input type="radio" name="shipping" value="Plus">Plus Shipping - 3 Business Days - $5.00
+        <br><input type="radio" name="shipping" value="Premium">Premium Shipping - Overnight - $50.00
+        <h3>Login:</h3>
+        Email: <input name="user" type="email" minLength="1" required><br><br>
+        Password: <input name="pass" type="password" minLength="1" required>
+        <br>
+        <br>
+        
+        <input onsubmit="document.querySelector('form').checkValidity()" type="submit" value="Submit">
+    </form>
+    <br>
+    <button onclick="document.querySelector('form').reset()">Reset</button>
+</body>
+</html>
